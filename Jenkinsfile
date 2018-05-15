@@ -28,8 +28,9 @@ pipeline {
        stage('Run local Container') {
            agent any
            steps {
-               sh 'docker rm -f petclinic-tomcat-temp || true'
-               sh "docker run -d --network=bridge --name petclinic-tomcat-temp liatrio/petclinic-tomcat:${env.BRANCH_NAME}"
+               //sh 'docker rm -f petclinic-tomcat-temp || true'
+               //sh "docker run -d --network=bridge --name petclinic-tomcat-temp liatrio/petclinic-tomcat:${env.BRANCH_NAME}"
+               sh "echo docker run -d --network=bridge --name petclinic-tomcat-temp liatrio/petclinic-tomcat:${env.BRANCH_NAME}"
            }
        }
        stage('Smoke-Test') {
