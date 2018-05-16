@@ -78,7 +78,6 @@
                     </archive>
                 </configuration>
             </plugin>
-        </executions>  
       </plugin>  
         </plugins>
     </build>
